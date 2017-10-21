@@ -27,7 +27,7 @@ public class MyAIController extends CarController{
 	private WorldSpatial.Direction previousState = null; // Keeps track of the previous state
 	
 	// Car Speed to move at
-	private float CAR_SPEED = 1;
+	private float CAR_SPEED = 2;
 	
 	// Offset used to differentiate between 0 and 360 degrees
 	private int EAST_THRESHOLD = 3;
@@ -122,17 +122,16 @@ public class MyAIController extends CarController{
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.EAST)) {
 					applyReverseAcceleration();
+					/*
+					if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
+						isFollowingCoordinate = true;
+					}*/
 					isGoingBackward = true;
-					isFollowingCoordinate = true;
 					
 				}
 				else{
 					isFollowingCoordinate = true;
 				}
-			}
-			else {
-				isFollowingCoordinate = true;
-				isGoingBackward = true;
 			}
 	
 			
@@ -147,7 +146,7 @@ public class MyAIController extends CarController{
 					applyReverseAcceleration();
 				}
 				System.out.println("Following backward route?:"+checkReverseFollowingCoordinate(getOrientation(),currentCoordinate));
-				if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
+				/*if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
 					switch(getOrientation()) {
 					case EAST:
 						if(CheckTurningAhead(WorldSpatial.Direction.WEST, currentCoordinate, currentView, delta)) {
@@ -182,7 +181,7 @@ public class MyAIController extends CarController{
 						}
 						break;
 					}
-				}
+				}*/
 				/*
 				else {
 					isGoingBackward = false;
@@ -205,16 +204,14 @@ public class MyAIController extends CarController{
 				/*if there is no turn ahead, remain original car speed*/
 				if(!CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta) && getSpeed() < CAR_SPEED){
 					applyForwardAcceleration();
-					CAR_SPEED = 1 ;
+					CAR_SPEED = 2 ;
 				}
 				/*if trap is in ahead*/
-				if(route.size() > 2) {
-					if(currentView.get(route.get(1)) instanceof TrapTile) {
-						applyBrake();
-					}
-					/*if(((TrapTile)currentView.get(currentCoordinate)).canAccelerate()) {
+				if(currentView.get(currentCoordinate) instanceof TrapTile) {
+					if(((TrapTile)currentView.get(currentCoordinate)).canAccelerate()) {
 						applyForwardAcceleration();
-					}*/
+					}
+					CAR_SPEED = 5;
 				}
 				System.out.println("Turning ahead: "+CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta));
 				
@@ -477,22 +474,6 @@ public class MyAIController extends CarController{
 		}
 		
 	}
-private boolean checkReverseFollowingCoordinate(WorldSpatial.Direction orientation, Coordinate currentCoordinate) {
-		
-		switch(orientation){
-		case EAST:
-			return checkWest(currentCoordinate);
-		case NORTH:
-			return checkSouth(currentCoordinate);
-		case SOUTH:
-			return checkNorth(currentCoordinate);
-		case WEST:
-			return checkEast(currentCoordinate);
-		default:
-			return false;
-		}
-		
-	}
 	
 	/**
 	 * Method below just iterates through the list and check in the correct coordinates.
@@ -550,7 +531,22 @@ private boolean checkReverseFollowingCoordinate(WorldSpatial.Direction orientati
 		else {
 			return false;
 		}
+	
 	}
-	
-	
+private boolean checkReverseFollowingCoordinate(WorldSpatial.Direction orientation, Coordinate currentCoordinate) {
+		
+		switch(orientation){
+		case EAST:
+			return checkWest(currentCoordinate);
+		case NORTH:
+			return checkSouth(currentCoordinate);
+		case SOUTH:
+			return checkNorth(currentCoordinate);
+		case WEST:
+			return checkEast(currentCoordinate);
+		default:
+			return false;
+		}
+		
+	}
 }
