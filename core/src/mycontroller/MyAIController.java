@@ -56,7 +56,7 @@ public class MyAIController extends CarController{
 		checkStateChange();
 		/*car is going to change direction in next move(not following the route)*/
 		if(!isFollowingCoordinate) {
-			if(getSpeed() < CAR_SPEED){
+			if(getSpeed() < CAR_SPEED && !isGoingBackward){
 				applyForwardAcceleration();
 			}
 			if(checkNorth(currentCoordinate)){
@@ -69,9 +69,8 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.SOUTH)) {
+					applyReverseAcceleration();
 					isGoingBackward = true;
-					applyBrake();
-					//isFollowingCoordinate = true;
 				}
 				else{
 					isFollowingCoordinate = true;
@@ -87,9 +86,8 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.NORTH)) {
-					applyBrake();
+					applyReverseAcceleration();
 					isGoingBackward = true;
-					//isFollowingCoordinate = true;
 				}
 				else{
 					isFollowingCoordinate = true;
@@ -105,9 +103,9 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.WEST)) {
-					applyBrake();
+					applyReverseAcceleration();
 					isGoingBackward = true;
-					//isFollowingCoordinate = true;
+					
 				}
 				else{
 					isFollowingCoordinate = true;
@@ -123,13 +121,17 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.EAST)) {
-					applyBrake();
+					applyReverseAcceleration();
 					isGoingBackward = true;
-					//isFollowingCoordinate = true;
+					
 				}
 				else{
 					isFollowingCoordinate = true;
 				}
+			}
+			else {
+				isFollowingCoordinate = true;
+				isGoingBackward = true;
 			}
 	
 			
@@ -140,15 +142,12 @@ public class MyAIController extends CarController{
 			System.out.println("going backward?:"+isGoingBackward);
 			if(isGoingBackward) {
 				//TO DO:
-				if(checkFollowingCoordinate(getOrientation(),currentCoordinate)) {
-					applyBrake();
-					//applyReverseAcceleration();
-					System.out.println("Following backward route?: "+checkFollowingCoordinate(getOrientation(),currentCoordinate));
+				if(getSpeed() < CAR_SPEED) {
+					applyReverseAcceleration();
 				}
 				
-				else {
-					isFollowingCoordinate = false;
-				}
+				
+				//applyBrake();
 				
 			}
 			/* car is moving forward*/
@@ -447,13 +446,10 @@ public class MyAIController extends CarController{
 	public boolean checkEast(Coordinate currentCoordinate){
 		// Check tiles to my right
 		Coordinate next = new Coordinate(currentCoordinate.x+1, currentCoordinate.y);
-		Coordinate back1 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y);
 		if(!route.isEmpty() && route.get(0).equals(next)) {
 			return true;
 		}
-		else if(!route.isEmpty() && route.get(0).equals(back1) && isGoingBackward) {
-			return true;
-		}
+
 		else {
 			return false;
 		}
@@ -462,13 +458,11 @@ public class MyAIController extends CarController{
 	public boolean checkWest(Coordinate currentCoordinate){
 		// Check tiles to my left
 		Coordinate next = new Coordinate(currentCoordinate.x-1, currentCoordinate.y);
-		Coordinate back = new Coordinate(currentCoordinate.x+1, currentCoordinate.y);
+
 		if(!route.isEmpty() && route.get(0).equals(next)) {
 			return true;
 		}
-		else if(!route.isEmpty() && route.get(0).equals(back) && isGoingBackward) {
-			return true;
-		}
+
 		else {
 			return false;
 		}
@@ -477,13 +471,11 @@ public class MyAIController extends CarController{
 	public boolean checkNorth(Coordinate currentCoordinate){
 		// Check tiles to towards the top
 		Coordinate next = new Coordinate(currentCoordinate.x, currentCoordinate.y+1);
-		Coordinate back = new Coordinate(currentCoordinate.x, currentCoordinate.y-1);
+
 		if(!route.isEmpty() && route.get(0).equals(next)) {
 			return true;
 		}
-		else if(!route.isEmpty() && route.get(0).equals(back) && isGoingBackward) {
-			return true;
-		}
+
 		else {
 			return false;
 		}
@@ -492,13 +484,10 @@ public class MyAIController extends CarController{
 	public boolean checkSouth(Coordinate currentCoordinate){
 		// Check tiles towards the bottom
 		Coordinate next = new Coordinate(currentCoordinate.x, currentCoordinate.y-1);
-		Coordinate back = new Coordinate(currentCoordinate.x, currentCoordinate.y+1);
 		if(!route.isEmpty() && route.get(0).equals(next)) {
 			return true;
 		}
-		else if(!route.isEmpty() && route.get(0).equals(back) && isGoingBackward) {
-			return true;
-		}
+
 		else {
 			return false;
 		}
