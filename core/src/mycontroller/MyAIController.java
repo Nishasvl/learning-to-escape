@@ -146,49 +146,10 @@ public class MyAIController extends CarController{
 				if(getSpeed() < CAR_SPEED) {
 					applyReverseAcceleration();
 				}
-				System.out.println("Following backward route?:"+checkReverseFollowingCoordinate(getOrientation(),currentCoordinate));
-				if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
-					switch(getOrientation()) {
-					case EAST:
-						if(CheckTurningAhead(WorldSpatial.Direction.WEST, currentCoordinate, currentView, delta)) {
-							CAR_SPEED = (float) 0.9;
-							if(getSpeed() > 0) {
-								applyBrake();
-							}
-						}
-						break;
-					case WEST:
-						if(CheckTurningAhead(WorldSpatial.Direction.EAST, currentCoordinate, currentView, delta)) {
-							CAR_SPEED = (float) 0.9;
-							if(getSpeed() > 0) {
-								applyBrake();
-							}
-						}
-						break;
-					case NORTH:
-						if(CheckTurningAhead(WorldSpatial.Direction.SOUTH, currentCoordinate, currentView, delta)) {
-							CAR_SPEED = (float) 0.9;
-							if(getSpeed() > 0) {
-								applyBrake();
-							}
-						}
-						break;
-					case SOUTH:
-						if(CheckTurningAhead(WorldSpatial.Direction.NORTH, currentCoordinate, currentView, delta)) {
-							CAR_SPEED = (float) 0.9;
-							if(getSpeed() > 0) {
-								applyBrake();
-							}
-						}
-						break;
-					}
-				}
-				/*
-				else {
-					isGoingBackward = false;
-					isFollowingCoordinate = false;
-					CAR_SPEED = (float) 1.4;
-				}*/
+				
+				
+				//applyBrake();
+				
 			}
 			/* car is moving forward*/
 			else if(checkFollowingCoordinate(getOrientation(),currentCoordinate)){
@@ -208,13 +169,10 @@ public class MyAIController extends CarController{
 					CAR_SPEED = 2 ;
 				}
 				/*if trap is in ahead*/
-				if(route.size() > 2) {
-					if(currentView.get(route.get(1)) instanceof TrapTile) {
-						applyBrake();
-					}
-					/*if(((TrapTile)currentView.get(currentCoordinate)).canAccelerate()) {
+				if(currentView.get(currentCoordinate) instanceof TrapTile) {
+					if(((TrapTile)currentView.get(currentCoordinate)).canAccelerate()) {
 						applyForwardAcceleration();
-					}*/
+					}
 				}
 				System.out.println("Turning ahead: "+CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta));
 				
@@ -477,22 +435,6 @@ public class MyAIController extends CarController{
 		}
 		
 	}
-private boolean checkReverseFollowingCoordinate(WorldSpatial.Direction orientation, Coordinate currentCoordinate) {
-		
-		switch(orientation){
-		case EAST:
-			return checkWest(currentCoordinate);
-		case NORTH:
-			return checkSouth(currentCoordinate);
-		case SOUTH:
-			return checkNorth(currentCoordinate);
-		case WEST:
-			return checkEast(currentCoordinate);
-		default:
-			return false;
-		}
-		
-	}
 	
 	/**
 	 * Method below just iterates through the list and check in the correct coordinates.
@@ -550,7 +492,6 @@ private boolean checkReverseFollowingCoordinate(WorldSpatial.Direction orientati
 		else {
 			return false;
 		}
+	
 	}
-	
-	
 }
