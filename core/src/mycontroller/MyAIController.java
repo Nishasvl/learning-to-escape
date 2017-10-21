@@ -27,7 +27,7 @@ public class MyAIController extends CarController{
 	private WorldSpatial.Direction previousState = null; // Keeps track of the previous state
 	
 	// Car Speed to move at
-	private float CAR_SPEED = 1;
+	private float CAR_SPEED = 2;
 	
 	// Offset used to differentiate between 0 and 360 degrees
 	private int EAST_THRESHOLD = 3;
@@ -205,7 +205,7 @@ public class MyAIController extends CarController{
 				/*if there is no turn ahead, remain original car speed*/
 				if(!CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta) && getSpeed() < CAR_SPEED){
 					applyForwardAcceleration();
-					CAR_SPEED = 1 ;
+					CAR_SPEED = 2 ;
 				}
 				/*if trap is in ahead*/
 				if(route.size() > 2) {
