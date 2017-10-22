@@ -120,11 +120,13 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.EAST)) {
-					applyBrake();
-					isGoingBackward = true;
-					if(getSpeed() < 0.03) {
-						isFollowingCoordinate = true;
+					
+					
+					if(getSpeed() >0.03) {
+						applyBrake();
 					}
+					isGoingBackward = true;
+					isFollowingCoordinate = true;
 				
 				}
 				else{
@@ -142,6 +144,7 @@ public class MyAIController extends CarController{
 				applyLeftTurn(getOrientation(),delta);
 			}
 			else if(isGoingBackward) {
+				applyReverseAcceleration();
 				System.out.println("going backward:");
 				//TO DO:
 				if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
