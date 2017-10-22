@@ -6,10 +6,8 @@ import java.util.List;
 import controller.AIController;
 import controller.CarController;
 import tiles.MapTile;
-import tiles.MudTrap;
 import tiles.TrapTile;
 import utilities.Coordinate;
-import utilities.PeekTuple;
 import world.Car;
 import world.WorldSpatial;
 
@@ -18,7 +16,6 @@ public class MyAIController extends CarController{
 	Navigation navigation;
 	List<Coordinate> route;
 	AIController ai;
-	private int wallSensitivity = 2;
 	private WorldSpatial.RelativeDirection lastTurnDirection = null; // Shows the last turn direction the car takes.
 	private boolean isTurningLeft = false;
 	private boolean isTurningRight = false;
@@ -522,6 +519,5 @@ private boolean checkReverseFollowingCoordinate(WorldSpatial.Direction orientati
 		default:
 			return false;
 		}
-		
 	}
 }
