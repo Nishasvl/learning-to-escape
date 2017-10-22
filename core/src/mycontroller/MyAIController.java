@@ -122,6 +122,10 @@ public class MyAIController extends CarController{
 				else if(getOrientation().equals(WorldSpatial.Direction.EAST)) {
 					applyBrake();
 					isGoingBackward = true;
+					if(getSpeed() < 0.03) {
+						isFollowingCoordinate = true;
+					}
+				
 				}
 				else{
 					isFollowingCoordinate = true;
@@ -142,10 +146,13 @@ public class MyAIController extends CarController{
 				//TO DO:
 				if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
 					//applyBrake();
-					applyReverseAcceleration();
-					System.out.println("Following backward route?: "+checkFollowingCoordinate(getOrientation(),currentCoordinate));
+					if(getSpeed() < CAR_SPEED) {
+						System.out.println("backward accelerating...");
+						applyReverseAcceleration();
+					}
 				}
 				System.out.println("Following backward route?:"+checkReverseFollowingCoordinate(getOrientation(),currentCoordinate));
+				/*
 				if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
 					switch(getOrientation()) {
 					case EAST:
@@ -181,7 +188,7 @@ public class MyAIController extends CarController{
 						}
 						break;
 					}
-				}
+				}*/
 				/*
 				else {
 					isGoingBackward = false;
@@ -222,6 +229,7 @@ public class MyAIController extends CarController{
 				
 			}
 			else if(!checkFollowingCoordinate(getOrientation(),currentCoordinate)){
+				System.out.println("going not to follow coordinate:");
 				isFollowingCoordinate = false;
 				CAR_SPEED = (float) 1.4;
 			}
