@@ -23,6 +23,7 @@ public class MyAIController extends CarController{
 	private boolean isTurningLeft = false;
 	private boolean isTurningRight = false;
 	private boolean isGoingBackward = false;
+	private boolean afterReversing = false;
 	private boolean isFollowingCoordinate = false;
 	private WorldSpatial.Direction previousState = null; // Keeps track of the previous state
 	
@@ -56,6 +57,9 @@ public class MyAIController extends CarController{
 		checkStateChange();
 		/*car is going to change direction in next move(not following the route)*/
 		if(!isFollowingCoordinate) {
+			if(afterReversing) {
+				applyForwardAcceleration();
+			}
 			if(getSpeed() < CAR_SPEED && !isGoingBackward){
 				applyForwardAcceleration();
 			}
@@ -154,14 +158,22 @@ public class MyAIController extends CarController{
 				applyReverseAcceleration();
 				System.out.println("following reverse route?:"+!checkReverseFollowingCoordinate(getOrientation(),currentCoordinate));
 				if(!checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
+					afterReversing = true;
 					isGoingBackward = false;
 					isFollowingCoordinate = false;
 				}
+				if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
+					if(getSpeed() >0.03) {
+						applyBrake();
+					}
+				}
+				
 			}
 				//System.out.println("Following backward route?:"+checkReverseFollowingCoordinate(getOrientation(),currentCoordinate));
 			/* car is moving forward*/
 
 			else if(checkFollowingCoordinate(getOrientation(),currentCoordinate)){
+				afterReversing = false;
 				/*check if next 3 coordinate in route, if there is change in front then slow down*/
 				if(CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta)) {
 					CAR_SPEED = (float) 1;
