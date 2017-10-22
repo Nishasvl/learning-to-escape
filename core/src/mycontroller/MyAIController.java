@@ -140,7 +140,7 @@ public class MyAIController extends CarController{
 			else if(isGoingBackward) {
 				System.out.println("going backward:");
 				//TO DO:
-				if(checkFollowingCoordinate(getOrientation(),currentCoordinate)) {
+				if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
 					//applyBrake();
 					applyReverseAcceleration();
 					System.out.println("Following backward route?: "+checkFollowingCoordinate(getOrientation(),currentCoordinate));

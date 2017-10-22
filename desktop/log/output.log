@@ -1,830 +1,1117 @@
-2017-10-22 12:14:41 INFO  Car - 
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.5222363
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.5555696
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.588903
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.6222363
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.6555696
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.6889029
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.7222362
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.7555695
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.7889028
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.8222361
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.8555694
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.8889027
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.922236
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.9555693
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.9889026
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 2.0222359
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 2.0111248
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 2.0000138
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 1.9889027
+Current Angle: 0.0
+Current Position: 4,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 2.022236
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:23 INFO  Car - 
+Current Speed: 2.011125
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.000014
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 1.9889029
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0222363
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0111253
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0000143
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 1.9889032
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0222366
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0111256
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0000145
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 1.9889034
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0222368
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0111258
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0000148
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 1.9889036
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.022237
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.011126
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.000015
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 1.9889039
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0222373
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0111263
+Current Angle: 0.0
+Current Position: 5,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0000153
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 1.9889041
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0222375
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0111265
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0000155
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 1.9889044
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0222378
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0111268
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0000157
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 1.9889046
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.022238
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.011127
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.000016
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 1.9889048
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0222383
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0111272
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0000162
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 1.9889051
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0222385
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0111275
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0000165
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 1.9889053
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0222387
+Current Angle: 0.0
+Current Position: 6,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0111277
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:24 INFO  Car - 
+Current Speed: 2.0000167
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9889055
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.022239
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.011128
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.000017
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9889058
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.0222392
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.0111282
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.0000172
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.988906
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.0222394
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.0111284
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.0000174
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9889063
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.0222397
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.0111287
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.0000176
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9889065
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.02224
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.011129
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 2.000018
+Current Angle: 0.0
+Current Position: 7,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9889067
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9777956
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9666845
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9555733
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9444622
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.933351
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9222399
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9111288
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.9000176
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.8889065
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.8777953
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.8666842
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.855573
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.8444619
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.8333508
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.8222396
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.8111285
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.8000174
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.7889062
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.7777951
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.7666839
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.7555728
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.7444617
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.7333505
+Current Angle: 0.0
+Current Position: 8,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:25 INFO  Car - 
+Current Speed: 1.7222394
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.7111282
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.6666838
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.6222394
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.5777949
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.5333505
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.488906
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.4444616
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.4000171
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.3555727
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.3111283
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.2666838
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.2222394
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.1777949
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.1333505
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.088906
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.0444616
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 1.0000172
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.9555727
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.9111283
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.86668384
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.8222394
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.77779496
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.7333505
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.6889061
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.64446163
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.6000172
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.55557275
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.5111283
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.46668386
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.42223942
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.37779498
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.33335054
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.2889061
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.24446166
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.20001721
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.15557277
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.11112833
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
+Current Speed: 0.06668389
+Current Angle: 0.0
+Current Position: 9,18
+Current Tile: ROAD
+
+
+2017-10-22 12:20:26 INFO  Car - 
 Current Speed: 0.022239443
 Current Angle: 0.0
 Current Position: 9,18
 Current Tile: ROAD
 
 
-2017-10-22 12:14:41 INFO  Car - 
+2017-10-22 12:20:26 INFO  Car - 
 Current Speed: 0.022205003
 Current Angle: 0.0
 Current Position: 9,18
 Current Tile: ROAD
 
 
-2017-10-22 12:14:41 INFO  Car - 
+2017-10-22 12:20:26 INFO  Car - 
 Current Speed: 0.022239443
 Current Angle: 0.0
 Current Position: 9,18
 Current Tile: ROAD
 
 
-2017-10-22 12:14:41 INFO  Car - 
+2017-10-22 12:20:26 INFO  Car - 
 Current Speed: 0.022205003
 Current Angle: 0.0
 Current Position: 9,18
 Current Tile: ROAD
 
 
-2017-10-22 12:14:41 INFO  Car - 
+2017-10-22 12:20:26 INFO  Car - 
 Current Speed: 0.022239443
 Current Angle: 0.0
 Current Position: 9,18
 Current Tile: ROAD
 
 
-2017-10-22 12:14:41 INFO  Car - 
+2017-10-22 12:20:26 INFO  Car - 
 Current Speed: 0.022205003
 Current Angle: 0.0
 Current Position: 9,18
 Current Tile: ROAD
 
 
-2017-10-22 12:14:41 INFO  Car - 
+2017-10-22 12:20:26 INFO  Car - 
 Current Speed: 0.022239443
 Current Angle: 0.0
 Current Position: 9,18
 Current Tile: ROAD
 
 
-2017-10-22 12:14:41 INFO  Car - 
+2017-10-22 12:20:27 INFO  Car - 
 Current Speed: 0.022205003
 Current Angle: 0.0
 Current Position: 9,18
 Current Tile: ROAD
 
 
-2017-10-22 12:14:41 INFO  Car - 
+2017-10-22 12:20:27 INFO  Car - 
 Current Speed: 0.022239443
 Current Angle: 0.0
 Current Position: 9,18
 Current Tile: ROAD
 
 
-2017-10-22 12:14:41 INFO  Car - 
+2017-10-22 12:20:27 INFO  Car - 
 Current Speed: 0.022205003
 Current Angle: 0.0
 Current Position: 9,18
 Current Tile: ROAD
 
 
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:41 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:42 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022239443
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
-Current Speed: 0.022205003
-Current Angle: 0.0
-Current Position: 9,18
-Current Tile: ROAD
-
-
-2017-10-22 12:14:43 INFO  Car - 
+2017-10-22 12:20:27 INFO  Car - 
 Current Speed: 0.022239443
 Current Angle: 0.0
 Current Position: 9,18
