@@ -159,54 +159,6 @@ public class MyAIController extends CarController{
 				}
 			}
 				//System.out.println("Following backward route?:"+checkReverseFollowingCoordinate(getOrientation(),currentCoordinate));
-				/*
-				if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
-					switch(getOrientation()) {
-					case EAST:
-						if(CheckTurningAhead(WorldSpatial.Direction.WEST, currentCoordinate, currentView, delta)) {
-							CAR_SPEED = (float) 0.9;
-							if(getSpeed() > 0) {
-								applyBrake();
-							}
-						}
-						break;
-					case WEST:
-						if(CheckTurningAhead(WorldSpatial.Direction.EAST, currentCoordinate, currentView, delta)) {
-							CAR_SPEED = (float) 0.9;
-							if(getSpeed() > 0) {
-								applyBrake();
-							}
-						}
-						break;
-					case NORTH:
-						if(CheckTurningAhead(WorldSpatial.Direction.SOUTH, currentCoordinate, currentView, delta)) {
-							CAR_SPEED = (float) 0.9;
-							if(getSpeed() > 0) {
-								applyBrake();
-							}
-						}
-						break;
-					case SOUTH:
-						if(CheckTurningAhead(WorldSpatial.Direction.NORTH, currentCoordinate, currentView, delta)) {
-							CAR_SPEED = (float) 0.9;
-							if(getSpeed() > 0) {
-								applyBrake();
-							}
-						}
-						break;
-					}
-				}*/
-				/*
-				else {
-					isGoingBackward = false;
-					isFollowingCoordinate = false;
-					CAR_SPEED = (float) 1.4;
-				}*/
-				/*
-				else {
-					isFollowingCoordinate = false;
-					isGoingBackward = false;
-				}	*/
 			/* car is moving forward*/
 
 			else if(checkFollowingCoordinate(getOrientation(),currentCoordinate)){
@@ -232,8 +184,6 @@ public class MyAIController extends CarController{
 					}
 				}
 				System.out.println("Turning ahead: "+CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta));
-				
-				
 			}
 			else if(!checkFollowingCoordinate(getOrientation(),currentCoordinate)){
 				System.out.println("going not to follow coordinate:");
