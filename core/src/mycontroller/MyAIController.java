@@ -11,8 +11,12 @@ import utilities.Coordinate;
 import world.Car;
 import world.WorldSpatial;
 
+/*Project Group 4
+Yi Siu Maria Choo
+Qing Feng Chye
+Huijun Lao
+*/
 public class MyAIController extends CarController{
-
 	Navigation navigation;
 	List<Coordinate> route;
 	AIController ai;
@@ -29,6 +33,11 @@ public class MyAIController extends CarController{
 	
 	// Offset used to differentiate between 0 and 360 degrees
 	private int EAST_THRESHOLD = 3;
+	private float BREAK_THRESHOLD = (float) 0.03;
+	private float CAR_SPEED_THRESHOLD1 = 1;
+	private float CAR_SPEED_THRESHOLD2 = (float) 1.1;
+	private float CHANGE_AHEAD_SPEED = (float) 1.4;
+	
 	
 	public MyAIController(Car car) {
 		super(car);
@@ -38,13 +47,20 @@ public class MyAIController extends CarController{
 	}
 
 	@Override
+	/* The car updating its movement based on coordinate by coordinate
+	 * whenever it meet trap it will replan a new route
+	 * whenever the car step on the coordinate on route planned, it will remove the first coordinate from route array
+	 * during driving speed is keep changing just like real life
+	 * the route speed limit is set based on big map given
+	 * given map tile and coordinate must be percise since the car is following coordinate by coordinate
+	 * when it step on the trap, it will try to accelerate(if possible)
+	 * 
+	 * @see controller.CarController#update(float)
+	 */
 	public void update(float delta) {
 		
 		Coordinate currentCoordinate = new Coordinate(this.getPosition());
-		System.out.println(route);
 		HashMap<Coordinate, MapTile> currentView = getView();
-		//ai.update(delta);
-		//System.out.print(" " + ai.getPosition());
 		if(currentCoordinate.equals(route.get(0))) {
 			route.remove(0);
 		}
@@ -52,14 +68,18 @@ public class MyAIController extends CarController{
 			route = navigation.getRoute();
 		}
 		checkStateChange();
-		/*car is going to change direction in next move(not following the route)*/
+		
+		/*car is going to change direction in next move(seen ahead the next coordinate is not in the same direction)*/
 		if(!isFollowingCoordinate) {
+			/*after reversing need to speed up a bit to let car remain constant speed*/
 			if(afterReversing) {
 				applyForwardAcceleration();
 			}
+			/*if car is not going back then speed up until car speed limit*/
 			if(getSpeed() < CAR_SPEED && !isGoingBackward){
 				applyForwardAcceleration();
 			}
+			/*condition checking which turn should apply based on car orientation*/
 			if(checkNorth(currentCoordinate)){
 				if(getOrientation().equals(WorldSpatial.Direction.EAST)){
 					lastTurnDirection = WorldSpatial.RelativeDirection.LEFT;
@@ -90,7 +110,7 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.NORTH)) {
-					if(getSpeed() >0.03) {
+					if(getSpeed() >BREAK_THRESHOLD) {
 						applyBrake();
 					}
 					isGoingBackward = true;
@@ -110,7 +130,7 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.WEST)) {
-					if(getSpeed() >0.03) {
+					if(getSpeed() >BREAK_THRESHOLD) {
 						applyBrake();
 					}
 					isGoingBackward = true;
@@ -130,7 +150,7 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.EAST)) {
-					if(getSpeed() >0.03) {
+					if(getSpeed() >BREAK_THRESHOLD) {
 						applyBrake();
 					}
 					isGoingBackward = true;
@@ -142,7 +162,11 @@ public class MyAIController extends CarController{
 				}
 			}
 		}
-		/*car is following the route planned*/
+		
+		/*car is following the route planned
+		 * check if car is turning right or left or going backward direction
+		 * route speed limit is set here
+		 */
 		else {
 			readjust(lastTurnDirection,delta);
 			if(isTurningRight){
@@ -151,33 +175,32 @@ public class MyAIController extends CarController{
 			else if(isTurningLeft){
 				applyLeftTurn(getOrientation(),delta);
 			}
+			/*car is moving backward*/
 			else if(isGoingBackward) {
 				applyReverseAcceleration();
-				System.out.println("following reverse route?:"+!checkReverseFollowingCoordinate(getOrientation(),currentCoordinate));
 				if(!checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
 					afterReversing = true;
 					isGoingBackward = false;
 					isFollowingCoordinate = false;
 				}
 				if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
-					if(getSpeed() >0.03) {
+					if(getSpeed() >BREAK_THRESHOLD) {
 						applyBrake();
 					}
 				}
 				
 			}
-				//System.out.println("Following backward route?:"+checkReverseFollowingCoordinate(getOrientation(),currentCoordinate));
 			/* car is moving forward*/
 
 			else if(checkFollowingCoordinate(getOrientation(),currentCoordinate)){
 				afterReversing = false;
 				/*check if next 3 coordinate in route, if there is change in front then slow down*/
 				if(CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta)) {
-					CAR_SPEED = (float) 1;
-					if(getSpeed() > 1) {
+					CAR_SPEED = CAR_SPEED_THRESHOLD1;
+					if(getSpeed() > CAR_SPEED_THRESHOLD1) {
 						applyBrake();
 					}
-					else if(CAR_SPEED < 1.1){
+					else if(CAR_SPEED < CAR_SPEED_THRESHOLD2){
 						applyForwardAcceleration();
 					}
 				}
@@ -186,24 +209,22 @@ public class MyAIController extends CarController{
 					applyForwardAcceleration();
 					CAR_SPEED = 2 ;
 				}
-				/*if trap is in ahead*/
+				/*if trap is beneath car foot*/
 				if(currentView.get(currentCoordinate) instanceof TrapTile) {
 					if(((TrapTile)currentView.get(currentCoordinate)).canAccelerate()) {
 						applyForwardAcceleration();
 					}
 				}
-				System.out.println("Turning ahead: "+CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta));
 			}
+			/*if not following coordinate,switch to top function*/
 			else if(!checkFollowingCoordinate(getOrientation(),currentCoordinate)){
-				System.out.println("going not to follow coordinate:");
 				isFollowingCoordinate = false;
-				CAR_SPEED = (float) 1.4;
+				CAR_SPEED = CHANGE_AHEAD_SPEED;
 			}
 		}
-		System.out.println("Following coordinate?: "+isFollowingCoordinate);
 	}
 
-		/*Supporting functions down here*/
+	/*Supporting functions down here*/
 	
 	/**
 	 * Readjust the car to the orientation we are in.
@@ -371,7 +392,7 @@ public class MyAIController extends CarController{
 		}
 		
 	}
-	
+	/*check if turning is ahead, if yes then slow down the car speed*/
 	private boolean CheckTurningAhead(WorldSpatial.Direction orientation, Coordinate currentCoordinate,HashMap<Coordinate, MapTile> currentView ,float delta) {
 		boolean flag = false;
 		Coordinate ahead1;
@@ -433,7 +454,7 @@ public class MyAIController extends CarController{
 	/**
 	 * Check if the car is following next coordinate
 	 * @param orientation
-	 * @param currentView
+	 * @param currentCoordinate 
 	 * @return
 	 */
 	private boolean checkFollowingCoordinate(WorldSpatial.Direction orientation, Coordinate currentCoordinate) {
@@ -455,11 +476,10 @@ public class MyAIController extends CarController{
 	
 	/**
 	 * Method below just iterates through the list and check in the correct coordinates.
-	 * i.e. Given your current position is 10,10
-	 * checkEast will check up to wallSensitivity amount of tiles to the right.
-	 * checkWest will check up to wallSensitivity amount of tiles to the left.
-	 * checkNorth will check up to wallSensitivity amount of tiles to the top.
-	 * checkSouth will check up to wallSensitivity amount of tiles below.
+	 * checkEast will check up to next coordinate to the right.
+	 * checkWest will check up to next coordinate to the left.
+	 * checkNorth will check up to next coordinate to the top.
+	 * checkSouth will check up to next coordinate below.
 	 */
 	public boolean checkEast(Coordinate currentCoordinate){
 		// Check tiles to my right
@@ -505,7 +525,8 @@ public class MyAIController extends CarController{
 		}
 	
 	}
-private boolean checkReverseFollowingCoordinate(WorldSpatial.Direction orientation, Coordinate currentCoordinate) {
+	/*same function as checkFollowingCoordinate, but in reverse direction*/
+	private boolean checkReverseFollowingCoordinate(WorldSpatial.Direction orientation, Coordinate currentCoordinate) {
 		
 		switch(orientation){
 		case EAST:
