@@ -162,28 +162,37 @@ public class MyAIController extends CarController{
 			/* car is moving forward*/
 
 			else if(checkFollowingCoordinate(getOrientation(),currentCoordinate)){
-				if(getSpeed() < CAR_SPEED){
-					applyForwardAcceleration();
-				}
 				/*check if next 3 coordinate in route, if there is change in front then slow down*/
-				CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta);
-				
+				if(CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta)) {
+					CAR_SPEED = (float) 1;
+					if(getSpeed() > 1) {
+						applyBrake();
+					}
+					else if(CAR_SPEED < 1.1){
+						applyForwardAcceleration();
+					}
+				}
+				/*if there is no turn ahead, remain original car speed*/
+				if(!CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta) && getSpeed() < CAR_SPEED){
+					applyForwardAcceleration();
+					CAR_SPEED = 2 ;
 				}
 				/*if trap is in ahead*/
-				/*if(currentView.get(currentCoordinate) instanceof TrapTile) {
+				if(currentView.get(currentCoordinate) instanceof TrapTile) {
 					if(((TrapTile)currentView.get(currentCoordinate)).canAccelerate()) {
 						applyForwardAcceleration();
 					}
-				}*/
+				}
+				System.out.println("Turning ahead: "+CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta));
 			}
-			/*
 			else if(!checkFollowingCoordinate(getOrientation(),currentCoordinate)){
 				System.out.println("going not to follow coordinate:");
 				isFollowingCoordinate = false;
 				CAR_SPEED = (float) 1.4;
-			}*/
+			}
 		}
-		//System.out.println("Following coordinate?: "+isFollowingCoordinate);
+		System.out.println("Following coordinate?: "+isFollowingCoordinate);
+	}
 
 		/*Supporting functions down here*/
 	
@@ -354,97 +363,61 @@ public class MyAIController extends CarController{
 		
 	}
 	
-	private void CheckTurningAhead(WorldSpatial.Direction orientation, Coordinate currentCoordinate,HashMap<Coordinate, MapTile> currentView ,float delta) {
+	private boolean CheckTurningAhead(WorldSpatial.Direction orientation, Coordinate currentCoordinate,HashMap<Coordinate, MapTile> currentView ,float delta) {
+		boolean flag = false;
 		Coordinate ahead1;
 		Coordinate ahead2;
 		Coordinate ahead3;
 		switch(orientation){
 		case EAST:
-			
+			ahead1 = new Coordinate(currentCoordinate.x+1, currentCoordinate.y);
+			ahead2 = new Coordinate(currentCoordinate.x+2, currentCoordinate.y);
+			ahead3 = new Coordinate(currentCoordinate.x+3, currentCoordinate.y);
 			//System.out.println("1,2,3: "+ahead1+ahead2+ahead3);
-			if(route.size() >= 3) {
-				ahead1 = new Coordinate(currentCoordinate.x+1, currentCoordinate.y);
-				ahead2 = new Coordinate(currentCoordinate.x+1, currentCoordinate.y+1);
-				ahead3 = new Coordinate(currentCoordinate.x+1, currentCoordinate.y+2);
-				if(route.get(0).equals(ahead1) && route.get(1).equals(ahead2) && route.get(2).equals(ahead3)){
-					isTurningLeft = true;
-				}
-				ahead1 = new Coordinate(currentCoordinate.x+1, currentCoordinate.y);
-				ahead2 = new Coordinate(currentCoordinate.x+1, currentCoordinate.y-1);
-				ahead3 = new Coordinate(currentCoordinate.x+1, currentCoordinate.y-2);
-				if(route.get(0).equals(ahead1) && route.get(1).equals(ahead2) && route.get(2).equals(ahead3)){
-					isTurningRight = true;
+			if(route.size() > 3) {
+				if(!ahead1.equals(route.get(0)) || !ahead2.equals(route.get(1)) || !ahead3.equals(route.get(2))){
+					flag = true;
 				}
 			}
 			break;
 			
 
 		case NORTH:
-			if(route.size() >= 3) {
-				ahead1 = new Coordinate(currentCoordinate.x, currentCoordinate.y+1);
-				ahead2 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y+1);
-				ahead3 = new Coordinate(currentCoordinate.x-2, currentCoordinate.y+1);
-				if(route.get(0).equals(ahead1) && route.get(1).equals(ahead2) && route.get(2).equals(ahead3)){
-					isTurningLeft = true;
-				}
-				ahead1 = new Coordinate(currentCoordinate.x, currentCoordinate.y+1);
-				ahead2 = new Coordinate(currentCoordinate.x+1, currentCoordinate.y+1);
-				ahead3 = new Coordinate(currentCoordinate.x+2, currentCoordinate.y+1);
-				if(route.get(0).equals(ahead1) && route.get(1).equals(ahead2) && route.get(2).equals(ahead3)){
-					isTurningRight = true;
-				}
-				ahead1 = new Coordinate(currentCoordinate.x, currentCoordinate.y+1);
-				ahead2 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y+1);
-				ahead3 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y+2);
-				if(route.get(0).equals(ahead1) && route.get(1).equals(ahead2) && route.get(2).equals(ahead3)){
-					isTurningLeft = true;
-					isTurningRight = true;
-				}
-				ahead1 = new Coordinate(currentCoordinate.x, currentCoordinate.y+1);
-				ahead2 = new Coordinate(currentCoordinate.x+1, currentCoordinate.y+1);
-				ahead3 = new Coordinate(currentCoordinate.x+1, currentCoordinate.y+2);
-				if(route.get(0).equals(ahead1) && route.get(1).equals(ahead2) && route.get(2).equals(ahead3)){
-					isTurningLeft = true;
-					isTurningRight = true;
+			ahead1 = new Coordinate(currentCoordinate.x, currentCoordinate.y+1);
+			ahead2 = new Coordinate(currentCoordinate.x, currentCoordinate.y+2);
+			ahead3 = new Coordinate(currentCoordinate.x, currentCoordinate.y+3);
+			if(route.size() > 3) {
+				if(!ahead1.equals(route.get(0)) || !ahead2.equals(route.get(1)) || !ahead3.equals(route.get(2))){
+					flag = true;
 				}
 			}
 			break;
 		case SOUTH:
-			if(route.size() >= 3) {
-				ahead1 = new Coordinate(currentCoordinate.x, currentCoordinate.y-1);
-				ahead2 = new Coordinate(currentCoordinate.x+1, currentCoordinate.y-1);
-				ahead3 = new Coordinate(currentCoordinate.x+2, currentCoordinate.y-1);
-				if(route.get(0).equals(ahead1) && route.get(1).equals(ahead2) && route.get(2).equals(ahead3)){
-					isTurningLeft = true;
-				}
-				ahead1 = new Coordinate(currentCoordinate.x, currentCoordinate.y-1);
-				ahead2 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y-1);
-				ahead3 = new Coordinate(currentCoordinate.x-2, currentCoordinate.y-1);
-				if(route.get(0).equals(ahead1) && route.get(1).equals(ahead2) && route.get(2).equals(ahead3)){
-					isTurningRight = true;
+			ahead1 = new Coordinate(currentCoordinate.x, currentCoordinate.y-1);
+			ahead2 = new Coordinate(currentCoordinate.x, currentCoordinate.y-2);
+			ahead3 = new Coordinate(currentCoordinate.x, currentCoordinate.y-3);
+			if(route.size() > 3) {
+				if(!ahead1.equals(route.get(0)) || !ahead2.equals(route.get(1)) || !ahead3.equals(route.get(2))){
+					flag = true;
 				}
 			}
 			break;
 
 		case WEST:
-			if(route.size() >= 3) {
-				ahead1 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y);
-				ahead2 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y-1);
-				ahead3 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y-2);
-				if(route.get(0).equals(ahead1) && route.get(1).equals(ahead2) && route.get(2).equals(ahead3)){
-					isTurningLeft = true;
-				}
-				ahead1 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y);
-				ahead2 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y+1);
-				ahead3 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y+2);
-				if(route.get(0).equals(ahead1) && route.get(1).equals(ahead2) && route.get(2).equals(ahead3)){
-					isTurningRight = true;
+			ahead1 = new Coordinate(currentCoordinate.x-1, currentCoordinate.y);
+			ahead2 = new Coordinate(currentCoordinate.x-2, currentCoordinate.y);
+			ahead3 = new Coordinate(currentCoordinate.x-3, currentCoordinate.y);
+			if(route.size() > 3) {
+				if(!ahead1.equals(route.get(0)) || !ahead2.equals(route.get(1)) || !ahead3.equals(route.get(2))){
+					flag = true;
 				}
 			}
 			break;
 		default:
 			break;
 		}
+
+		return flag;
 		
 	}
 	
@@ -481,8 +454,8 @@ public class MyAIController extends CarController{
 	 */
 	public boolean checkEast(Coordinate currentCoordinate){
 		// Check tiles to my right
-		Coordinate next = new Coordinate(currentCoordinate.x+2, currentCoordinate.y);
-		if(route.size() >= 1 && route.get(1).equals(next)) {
+		Coordinate next = new Coordinate(currentCoordinate.x+1, currentCoordinate.y);
+		if(!route.isEmpty() && route.get(0).equals(next)) {
 			return true;
 		}
 		else {
@@ -492,8 +465,8 @@ public class MyAIController extends CarController{
 	
 	public boolean checkWest(Coordinate currentCoordinate){
 		// Check tiles to my left
-		Coordinate next = new Coordinate(currentCoordinate.x-2, currentCoordinate.y);
-		if(route.size() >= 1 && route.get(1).equals(next)) {
+		Coordinate next = new Coordinate(currentCoordinate.x-1, currentCoordinate.y);
+		if(!route.isEmpty() && route.get(0).equals(next)) {
 			return true;
 		}
 		else {
@@ -503,8 +476,8 @@ public class MyAIController extends CarController{
 	
 	public boolean checkNorth(Coordinate currentCoordinate){
 		// Check tiles to towards the top
-		Coordinate next = new Coordinate(currentCoordinate.x, currentCoordinate.y+2);
-		if(route.size() >= 1 && route.get(1).equals(next)) {
+		Coordinate next = new Coordinate(currentCoordinate.x, currentCoordinate.y+1);
+		if(!route.isEmpty() && route.get(0).equals(next)) {
 			return true;
 		}
 		else {
@@ -514,8 +487,8 @@ public class MyAIController extends CarController{
 	
 	public boolean checkSouth(Coordinate currentCoordinate){
 		// Check tiles towards the bottom
-		Coordinate next = new Coordinate(currentCoordinate.x, currentCoordinate.y-2);
-		if(route.size() >= 1 && route.get(1).equals(next)) {
+		Coordinate next = new Coordinate(currentCoordinate.x, currentCoordinate.y-1);
+		if(!route.isEmpty() && route.get(0).equals(next)) {
 			return true;
 		}
 		else {
