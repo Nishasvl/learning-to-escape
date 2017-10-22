@@ -62,13 +62,11 @@ public class MyAIController extends CarController{
 			if(checkNorth(currentCoordinate)){
 				if(getOrientation().equals(WorldSpatial.Direction.EAST)){
 					lastTurnDirection = WorldSpatial.RelativeDirection.LEFT;
-					isTurningLeft = true;
-					isFollowingCoordinate = true;
+					applyLeftTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.WEST)){
 					lastTurnDirection = WorldSpatial.RelativeDirection.RIGHT;
-					isTurningRight = true;
-					isFollowingCoordinate = true;
+					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.SOUTH)) {
 					if(getSpeed() >0.03) {
@@ -84,20 +82,17 @@ public class MyAIController extends CarController{
 			else if(checkSouth(currentCoordinate)) {
 				if(getOrientation().equals(WorldSpatial.Direction.WEST)){
 					lastTurnDirection = WorldSpatial.RelativeDirection.LEFT;
-					isTurningLeft = true;
-					isFollowingCoordinate = true;
+					applyLeftTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.EAST)){
 					lastTurnDirection = WorldSpatial.RelativeDirection.RIGHT;
-					isTurningRight = true;
-					isFollowingCoordinate = true;
+					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.NORTH)) {
 					if(getSpeed() >0.03) {
 						applyBrake();
 					}
 					isGoingBackward = true;
-					isFollowingCoordinate = true;
 					isFollowingCoordinate = true;
 				}
 				else{
@@ -107,13 +102,11 @@ public class MyAIController extends CarController{
 			else if(checkEast(currentCoordinate)) {
 				if(getOrientation().equals(WorldSpatial.Direction.SOUTH)){
 					lastTurnDirection = WorldSpatial.RelativeDirection.LEFT;
-					isTurningLeft = true;
-					isFollowingCoordinate = true;
+					applyLeftTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.NORTH)){
 					lastTurnDirection = WorldSpatial.RelativeDirection.RIGHT;
-					isTurningRight = true;
-					isFollowingCoordinate = true;
+					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.WEST)) {
 					if(getSpeed() >0.03) {
@@ -129,13 +122,11 @@ public class MyAIController extends CarController{
 			else if(checkWest(currentCoordinate)) {
 				if(getOrientation().equals(WorldSpatial.Direction.NORTH)){
 					lastTurnDirection = WorldSpatial.RelativeDirection.LEFT;
-					isTurningLeft = true;
-					isFollowingCoordinate = true;
+					applyLeftTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.SOUTH)){
 					lastTurnDirection = WorldSpatial.RelativeDirection.RIGHT;
-					isTurningRight = true;
-					isFollowingCoordinate = true;
+					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.EAST)) {
 					if(getSpeed() >0.03) {
@@ -154,14 +145,10 @@ public class MyAIController extends CarController{
 		else {
 			readjust(lastTurnDirection,delta);
 			if(isTurningRight){
-				if(checkFollowingCoordinate(getOrientation(),currentCoordinate)){
-					applyRightTurn(getOrientation(),delta);
-				}
+				applyRightTurn(getOrientation(),delta);
 			}
 			else if(isTurningLeft){
-				if(checkFollowingCoordinate(getOrientation(),currentCoordinate)){
-					applyLeftTurn(getOrientation(),delta);
-				}
+				applyLeftTurn(getOrientation(),delta);
 			}
 			else if(isGoingBackward) {
 				applyReverseAcceleration();
