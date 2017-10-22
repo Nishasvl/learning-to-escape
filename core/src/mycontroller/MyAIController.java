@@ -69,8 +69,11 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.SOUTH)) {
+					if(getSpeed() >0.03) {
+						applyBrake();
+					}
 					isGoingBackward = true;
-					applyBrake();
+					isFollowingCoordinate = true;
 				}
 				else{
 					isFollowingCoordinate = true;
@@ -86,8 +89,11 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.NORTH)) {
-					applyBrake();
+					if(getSpeed() >0.03) {
+						applyBrake();
+					}
 					isGoingBackward = true;
+					isFollowingCoordinate = true;
 				}
 				else{
 					isFollowingCoordinate = true;
@@ -103,8 +109,11 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.WEST)) {
-					applyBrake();
+					if(getSpeed() >0.03) {
+						applyBrake();
+					}
 					isGoingBackward = true;
+					isFollowingCoordinate = true;
 				}
 				else{
 					isFollowingCoordinate = true;
@@ -120,8 +129,6 @@ public class MyAIController extends CarController{
 					applyRightTurn(getOrientation(),delta);
 				}
 				else if(getOrientation().equals(WorldSpatial.Direction.EAST)) {
-					
-					
 					if(getSpeed() >0.03) {
 						applyBrake();
 					}
@@ -145,16 +152,13 @@ public class MyAIController extends CarController{
 			}
 			else if(isGoingBackward) {
 				applyReverseAcceleration();
-				System.out.println("going backward:");
-				//TO DO:
-				if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
-					//applyBrake();
-					if(getSpeed() < CAR_SPEED) {
-						System.out.println("backward accelerating...");
-						applyReverseAcceleration();
-					}
+				System.out.println("following reverse route?:"+!checkReverseFollowingCoordinate(getOrientation(),currentCoordinate));
+				if(!checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
+					isGoingBackward = false;
+					isFollowingCoordinate = false;
 				}
-				System.out.println("Following backward route?:"+checkReverseFollowingCoordinate(getOrientation(),currentCoordinate));
+			}
+				//System.out.println("Following backward route?:"+checkReverseFollowingCoordinate(getOrientation(),currentCoordinate));
 				/*
 				if(checkReverseFollowingCoordinate(getOrientation(),currentCoordinate)) {
 					switch(getOrientation()) {
@@ -203,8 +207,8 @@ public class MyAIController extends CarController{
 					isFollowingCoordinate = false;
 					isGoingBackward = false;
 				}	*/
-			}
 			/* car is moving forward*/
+
 			else if(checkFollowingCoordinate(getOrientation(),currentCoordinate)){
 				/*check if next 3 coordinate in route, if there is change in front then slow down*/
 				if(CheckTurningAhead(getOrientation(),currentCoordinate,currentView, delta)) {
